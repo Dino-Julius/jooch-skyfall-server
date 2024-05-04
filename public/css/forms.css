@@ -1,0 +1,166 @@
+html {
+    min-height: 100%;
+    background: url("/imgs/fondo_cielo.png");
+    background-size: cover;
+}
+
+/* 
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    font-family: 'Jost', sans-serif;
+    background: linear-gradient(to bottom, #f4a967, #e7b386, #fab981);
+} */
+
+
+
+body::before {
+    content: "";
+    background: url('/imgs/nube_large.png');
+    position: absolute;
+    top: -200px;
+    left: 0;
+    height: 100%;
+    width: 50%;
+    z-index: -1;
+    animation: moveClouds1 15s linear infinite;
+    animation-delay: 1s; 
+    animation-fill-mode: backwards;
+}
+
+body::after {
+    content: "";
+    background: url('/imgs/nube_short.png');
+    position: absolute;
+    top: 0px;
+    left: 0;
+    height: 100%;
+    width: 60%;
+    z-index: -1;
+    animation: moveClouds2 15s linear infinite;
+    animation-delay: 10s;
+    animation-fill-mode: backwards;
+}
+
+@keyframes moveClouds1 {
+    0% { 
+        transform: translateX(-50%); 
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.2;
+    }
+    100% { 
+        transform: translateX(180%); 
+        opacity: 1;
+    }
+}
+
+@keyframes moveClouds2 {
+    0% { 
+        transform: translateX(-50%); 
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.2;
+    }
+    100% { 
+        transform: translateX(180%); 
+        opacity: 1;
+    }
+}
+
+.main {
+    width: 350px;
+    height: 560px;
+    background: red;
+    overflow: hidden;
+    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
+    border-radius: 10px;
+    box-shadow: 5px 20px 50px #7f3e05;
+}
+
+label{
+    display: block;
+    text-align: center;
+    color: #fff;
+    font-size: 2.1em;
+    padding-top: 20px;
+    padding-bottom: 0%;
+    margin: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+input, select {
+    width: 200px; /* Ajusta este valor según sea necesario */
+    height: 20px;
+    background: #eee;
+    display: flex;
+    margin: 10px auto;
+    padding: 10px;
+    outline: none;
+    border: 1px solid #eee; /* Esto añade un marco */
+    border-radius: 10px; /* Esto redondea las esquinas */
+    text-align: center; /* Esto centra el texto */
+    font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+    font-size: 16px; /* Ajusta esta propiedad según el tamaño de la tipografía que estés utilizando en los inputs */
+}
+
+.selectores select {
+    width: 220px; /* Ajusta este valor según sea necesario */
+    height: 50%;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+}
+
+.selectores select:last-child {
+    margin-right: 0; /* Esto elimina el margen derecho del último selector para evitar un desbordamiento */
+}
+
+button {
+    width: 60%;
+    height: 40px;
+    margin: 20px auto;
+    color: #fff;
+    background: #f47b12;
+    font-size: 1em;
+    font-weight: bold;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: .2s ease-in;
+}
+
+button:hover {
+    background: #f3af04;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.selectores select::placeholder {
+    opacity: 0.5;
+    color: #aaa; /* Ajusta este valor según sea necesario */
+}
+
+.selectores select option[value=""] {
+    color: #aaa; /* Ajusta este valor según sea necesario */
+}
+
+
