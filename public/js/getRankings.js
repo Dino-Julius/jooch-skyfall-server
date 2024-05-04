@@ -1,3 +1,5 @@
+import { moveClouds } from './clouds.js';
+
 // Obtén una referencia al elemento del DOM donde quieres mostrar los datos
 const top5Container = document.getElementById('top5');
 
@@ -19,8 +21,9 @@ fetch('/getRanking')
                 <div class="list">
                     <div class="content">
                         <h2 class="rank"><small>#</small>${index + 1}</h2>
-                        <h4>${jugador.nombre}</h4>
-                        <p>Puntos: ${jugador.puntos}</p>
+                        <h3>${jugador.nombre}</h3>
+                        <p>${jugador.tipo_financiamiento}</p>
+                        <p>${jugador.puntos}</p>
                     </div>
                 </div>
             `;
@@ -29,3 +32,6 @@ fetch('/getRanking')
         });
     })
     .catch(error => console.error('Error:', error));
+
+// Animación nubes
+moveClouds();

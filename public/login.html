@@ -1,44 +1,63 @@
 <!DOCTYPE html>
 <html lang="es-MX">
   <head>
-    <meta charset="UTF-8">
-    <title>Jooch Skyfall - The Game</title>
-    <link rel="stylesheet" href="css/login.css">
-    <link rel="icon" href="game.ico" type="image/x-icon">
+    <meta charset="UTF-8" />
+    <title>Ingreso - Jooch Skyfall</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/login.css" />
+    <link rel="icon" href="game.ico" type="image/x-icon" />
     <script type="module" src="js/login.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
-      <body>
-        <div id="cloud1" class="cloud"></div>
-        <div id="cloud2" class="cloud"></div>
-        <div id="cloud3" class="cloud"></div>
-        <div id="cloud4" class="cloud"></div>
-        <div class="main">
-          <input type="checkbox" id="chk" aria-hidden="true">
+  <body>
+    <div id="cloud1" class="cloud"></div>
+    <div id="cloud2" class="cloud"></div>
+    <div id="cloud3" class="cloud"></div>
+    <div id="cloud4" class="cloud"></div>
+    <div class="main">
+      <input type="checkbox" id="chk" aria-hidden="true" />
 
-          <div class="signup">
-            <form action="forms.html">
-              <label for="chk" aria-hidden="true">REGÍSTRATE</label>
-              <div class="input-group">
-                <input type=text name="nombre" placeholder="Nombre" required="">
-                <input type=text name="apellido" placeholder="Apellido" required="">
-              </div>
-              <input type=email name="email" placeholder="Correo" required="">
-              <input type=password name="pswd" placeholder="Contraseña" required="">
-              <button type="submit" class="signupB">ENVIAR</button>
-            </form>
+      <div class="signup">
+        <form action="forms.html">
+          <label for="chk" aria-hidden="true">REGÍSTRATE</label>
+          <div class="input-group">
+            <input type="text" name="nombre" placeholder="Nombre" required />
+            <input
+              type="text"
+              name="apellido"
+              placeholder="Apellido"
+              required
+            />
           </div>
+          <input type="email" name="email" placeholder="Correo" required />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Contraseña"
+            required
+          />
+          <button type="submit" class="signupB">ENVIAR</button>
+        </form>
+      </div>
 
-          <div class="login">
-            <form>
-              <label for="chk" aria-hidden="true">INGRESAR</label>
-              <input type=email name="email" placeholder="Correo" required="">
-              <input type=password name="pswd" placeholder="Contraseña" required="">
-              <button class="loginB">ENVIAR</button>
-            </form>
-          </div>
-        </div>
-      </body>
+      <div class="login">
+        <form>
+          <label for="chk" aria-hidden="true">INGRESAR</label>
+          <input type="email" name="email" placeholder="Correo" required />
+          <input
+            type="password"
+            name="pswd"
+            placeholder="Contraseña"
+            required
+          />
+          <button class="loginB">ENVIAR</button>
+        </form>
+      </div>
+    </div>
+  </body>
 </html>

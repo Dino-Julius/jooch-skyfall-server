@@ -1,49 +1,40 @@
 <!DOCTYPE html>
-<html>
-    <title>Landing Page</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <style>
-        body {
-            background-image: url('imgs/fondo_cielo.png');
-            background-size: cover;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-        }
-        .container {
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 20px;
-            border-radius: 12px;
-        }
-        .button {
-            background-color: yellow;
-            border: none;
-            color: black;
-            padding: 15px 32px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
-            border-radius: 12px;
-        }
-    </style>
-    <body>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <title>The Game - Jooch Skyfall</title>
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="icon" href="game.ico" type="image/x-icon" />
+    <script type="module" src="js/index.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-        <div class="w3-container w3-center w3-animate-opacity container">
-            <h1>Jooch Skyfall</h1>
-            <p>Bienvenido al menú de Jooch Skyfall</p>
-            <p>Por favor, haga clic en uno de los botones de abajo para iniciar sesión, ver el ranking o ver el dashboard.</p>
-            <button class="w3-button w3-large button" onclick="window.location.href='login.html'">Ingresar</button>
-            <button class="w3-button w3-large button" onclick="window.location.href='ranking.html'">Ver Ranking</button>
-            <button class="w3-button w3-large button" onclick="window.location.href='dashboard.html'" style="display: none">Ver Dashboard</button>
-        </div>
-
-    </body>
+  <body>
+    <div id="cloud1" class="cloud"></div>
+    <div id="cloud2" class="cloud"></div>
+    <div id="cloud3" class="cloud"></div>
+    <div id="cloud4" class="cloud"></div>
+    <div class="main">
+      <label aria-hidden="true">Jooch Skyfall</label>
+      <p style="display: none">Bienvenido al menú de Jooch Skyfall</p>
+      <p>
+        Por favor, haga clic en uno de los botones de abajo para iniciar sesión,
+        ver el ranking o ver el dashboard.
+      </p>
+      <button type="submit" onclick="window.location.href='login.html'">
+        Ingresar
+      </button>
+      <button type="submit" onclick="window.location.href='ranking.html'">
+        Ver Ranking
+      </button>
+      <button type="submit" onclick="window.location.href='dashboard.html'">
+        Ver Dashboard
+      </button>
+    </div>
+  </body>
 </html>

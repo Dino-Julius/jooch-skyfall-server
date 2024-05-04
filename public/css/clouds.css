@@ -1,0 +1,25 @@
+.cloud {
+    position: absolute;
+    height: 100%;
+    z-index: -1;
+}
+
+#cloud1,
+#cloud3 {
+    background: url('/imgs/nube_large.png') no-repeat;
+    background-size: 50vw;
+    top: -20vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+#cloud2,
+#cloud4 {
+    background: url('/imgs/nube_short.png') no-repeat;
+    background-size: 50vw;
+    top: 30vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+}

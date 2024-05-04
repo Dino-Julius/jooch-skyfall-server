@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="es-MX">
   <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8" />
     <title>Jooch Skyfall - The Game</title>
-    <link rel="stylesheet" href="css/forms.css">
-    <link rel="icon" href="game.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/forms.css" />
+    <link rel="icon" href="game.ico" type="image/x-icon" />
     <script type="module" src="js/forms.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
@@ -20,31 +23,38 @@
       <form>
         <label aria-hidden="true">DATOS PERSONALES</label>
         <div class="content">
-          <input id="telefono" type="tel" name="Teléfono" placeholder="Teléfono" pattern="[0-9]{10}" required="">
+          <input
+            id="telefono"
+            type="tel"
+            name="Teléfono"
+            placeholder="Teléfono"
+            pattern="[0-9]{10}"
+            required
+          />
           <div class="selectores">
-            <select name="tipUsuario" required="">
-              <option value="">Tipo de Usuario</option>
+            <select name="tipUsuario" required>
+              <option value>Tipo de Usuario</option>
               <option value="casual">Casual</option>
               <option value="inversionista">Inversionista</option>
               <option value="socio">Socio</option>
             </select>
-            <select name="gender" required="">
-              <option value="">Sexo</option>
+            <select name="gender" required>
+              <option value>Sexo</option>
               <option value="M">Hombre</option>
               <option value="F">Mujer</option>
               <option value="O">Otro</option>
             </select>
-            <select id="pais" name="pais" required="">
-              <option value="">Selecciona un país</option>
+            <select id="pais" name="pais" required>
+              <option value>Selecciona un país</option>
               <!-- Opciones de países -->
             </select>
 
             <select id="estado" name="estado" disabled>
-              <option value="">Selecciona un estado</option>
+              <option value>Selecciona un estado</option>
               <!-- Este selector se llenará con los estados cuando se seleccione México -->
             </select>
           </div>
-          <input type=date name="cumple" required="">
+          <input type="date" name="cumple" required />
         </div>
         <button type="submit">ENVIAR</button>
       </form>

@@ -1,53 +1,32 @@
+@import './clouds.css';
+
 html {
-    min-height: 100%;
-    background: url("/imgs/fondo_cielo.png");
-    background-size: cover;
-    overflow: hidden;  /* Añade esta línea */
-	font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+	min-height: 100%;
+	background: url("/imgs/fondo_cielo.png");
+	background-size: cover;
+	overflow: hidden;
+	font-family: 'Jost', sans-serif;
 }
 
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-	font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	margin: 0;
+	font-family: 'Jost', sans-serif;
 }
 
-.cloud {
-    position: absolute;
-    height: 100%;
-    z-index: -1;
-}
 
-#cloud1, #cloud3 {
-    background: url('/imgs/nube_large.png') no-repeat;
-    background-size: 50vw;
-    top: -20vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-#cloud2, #cloud4 {
-    background: url('/imgs/nube_short.png') no-repeat;
-    background-size: 50vw;
-    top: 30vh;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-}
-
-.main{
+.main {
 	width: 350px;
 	height: 500px;
 	overflow: hidden;
 	background: rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(10px);
-    border-radius: 10px;
-    box-shadow: 5px 25px 50px #ffffff;
-	font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+	backdrop-filter: blur(10px);
+	border-radius: 10px;
+	box-shadow: 5px 25px 50px #ffffff;
+	font-family: 'Jost', sans-serif;
 }
 
 #chk{
@@ -73,7 +52,7 @@ label{
 
 .input-group {
 	display: flex;
-	justify-content: space-between; /* Esto añade espacio entre los inputs */
+	justify-content: space-between;
 	align-items: center;
 }
 
@@ -81,35 +60,35 @@ label{
 	width: 35%;
 	height: 20px;
 	justify-content: center;
-    margin: 10px auto;
-    padding: 10px;
-    border: none;
-    outline: none;
+	margin: 10px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
 	margin-right: 0px;
 	margin-bottom: auto;
-    border-radius: 10px;
+	border-radius: 10px;
 	text-align: center;
 	border: 1px solid #f4a967;
-	font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+	font-family: 'Jost', sans-serif;
 }
 
 .input-group input:last-child {
-    margin-right: 20px; /* Esto elimina el margen derecho del último input para evitar un desbordamiento */
+	margin-right: 20px;
 }
 
 input:not(.input-group input) {
-    width: 60%;
-    height: 20px;
-    justify-content: center;
-    display: flex;
-    margin: 10px auto;
-    padding: 10px;
-    border: none;
-    outline: none;
+	width: 60%;
+	height: 20px;
+	justify-content: center;
+	display: flex;
+	margin: 10px auto;
+	padding: 10px;
+	border: none;
+	outline: none;
 	border: 1px solid #f4a967;
-    border-radius: 10px;
+	border-radius: 10px;
 	text-align: center;
-	font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+	font-family: 'Jost', sans-serif;
 }
 
 input::placeholder {
@@ -155,13 +134,13 @@ input::placeholder {
 }
 
 .signupB:hover {
-    background: #f3af04;
-    color: #fff;
+	background: #f3af04;
+	color: #fff;
 }
 
 .loginB:hover {
-    color: #f3af04;
-    background: #fff;
+	color: #f3af04;
+	background: #fff;
 	border: 1px solid #f4a967;
 }
 
@@ -171,7 +150,7 @@ input::placeholder {
 	border-radius: 70% / 10%;
 	transform: translateY(-180px);
 	transition: .6s ease-in-out;
-	font-family: 'Jost', sans-serif; /* Ajusta esta propiedad según la tipografía que estés utilizando en los inputs */
+	font-family: 'Jost', sans-serif;
 }
 
 .login label{
