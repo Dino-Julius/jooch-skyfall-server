@@ -3,14 +3,18 @@
   <head>
     <meta charset="UTF-8">
     <title>Jooch Skyfall - The Game</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="icon" href="game.ico" type="image/x-icon">
-    <script src="js/index.js" defer></script>
+    <script type="module" src="js/login.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
   </head>
       <body>
+        <div id="cloud1" class="cloud"></div>
+        <div id="cloud2" class="cloud"></div>
+        <div id="cloud3" class="cloud"></div>
+        <div id="cloud4" class="cloud"></div>
         <div class="main">
           <input type="checkbox" id="chk" aria-hidden="true">
 
@@ -23,7 +27,7 @@
               </div>
               <input type=email name="email" placeholder="Correo" required="">
               <input type=password name="pswd" placeholder="Contraseña" required="">
-              <button type="submit">ENVIAR</button>
+              <button type="submit" class="signupB">ENVIAR</button>
             </form>
           </div>
 
@@ -32,7 +36,7 @@
               <label for="chk" aria-hidden="true">INGRESAR</label>
               <input type=email name="email" placeholder="Correo" required="">
               <input type=password name="pswd" placeholder="Contraseña" required="">
-              <button>ENVIAR</button>
+              <button class="loginB">ENVIAR</button>
             </form>
           </div>
         </div>

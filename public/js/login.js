@@ -1,3 +1,5 @@
+import { moveClouds } from './clouds.js';
+
 // Seleccionamos los formularios
 const signupForm = document.querySelector('.signup form');
 const loginForm = document.querySelector('.login form');
@@ -61,3 +63,6 @@ loginForm.addEventListener('submit', async function(event) {
         alert('Las credenciales son incorrectas: ' + errorData.message);
     }
 });
+
+// Animación nubes
+moveClouds();
