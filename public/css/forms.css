@@ -2,92 +2,48 @@ html {
     min-height: 100%;
     background: url("/imgs/fondo_cielo.png");
     background-size: cover;
+    overflow: hidden;  /* Añade esta línea */
 }
 
-/* 
 body {
-    margin: 0;
-    padding: 0;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    font-family: 'Jost', sans-serif;
-    background: linear-gradient(to bottom, #f4a967, #e7b386, #fab981);
-} */
+    height: 100vh;
+    margin: 0;
+}
 
-
-
-body::before {
-    content: "";
-    background: url('/imgs/nube_large.png');
+.cloud {
     position: absolute;
-    top: -200px;
-    left: 0;
     height: 100%;
-    width: 50%;
     z-index: -1;
-    animation: moveClouds1 15s linear infinite;
-    animation-delay: 1s; 
-    animation-fill-mode: backwards;
 }
 
-body::after {
-    content: "";
-    background: url('/imgs/nube_short.png');
-    position: absolute;
-    top: 0px;
+#cloud1, #cloud3 {
+    background: url('/imgs/nube_large.png') no-repeat;
+    background-size: 50vw;
+    top: -20vh;
     left: 0;
-    height: 100%;
-    width: 60%;
-    z-index: -1;
-    animation: moveClouds2 15s linear infinite;
-    animation-delay: 10s;
-    animation-fill-mode: backwards;
+    width: 100vw;
+    height: 100vh;
 }
 
-@keyframes moveClouds1 {
-    0% { 
-        transform: translateX(-50%); 
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 0.2;
-    }
-    100% { 
-        transform: translateX(180%); 
-        opacity: 1;
-    }
-}
-
-@keyframes moveClouds2 {
-    0% { 
-        transform: translateX(-50%); 
-        opacity: 0;
-    }
-    10% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 0.2;
-    }
-    100% { 
-        transform: translateX(180%); 
-        opacity: 1;
-    }
+#cloud2, #cloud4 {
+    background: url('/imgs/nube_short.png') no-repeat;
+    background-size: 50vw;
+    top: 30vh;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
 }
 
 .main {
     width: 350px;
     height: 560px;
-    background: red;
-    overflow: hidden;
-    background: url("https://doc-08-2c-docs.googleusercontent.com/docs/securesc/68c90smiglihng9534mvqmq1946dmis5/fo0picsp1nhiucmc0l25s29respgpr4j/1631524275000/03522360960922298374/03522360960922298374/1Sx0jhdpEpnNIydS4rnN4kHSJtU1EyWka?e=view&authuser=0&nonce=gcrocepgbb17m&user=03522360960922298374&hash=tfhgbs86ka6divo3llbvp93mg4csvb38") no-repeat center/cover;
+    background: rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(10px);
     border-radius: 10px;
-    box-shadow: 5px 20px 50px #7f3e05;
+    box-shadow: 5px 25px 50px #ffffff;
 }
 
 label{
@@ -117,6 +73,12 @@ input, select {
     font-size: 16px; /* Ajusta esta propiedad según el tamaño de la tipografía que estés utilizando en los inputs */
 }
 
+input[type="date"] {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
 .selectores select {
     width: 220px; /* Ajusta este valor según sea necesario */
     height: 50%;
@@ -132,8 +94,8 @@ button {
     width: 60%;
     height: 40px;
     margin: 20px auto;
-    color: #fff;
-    background: #f47b12;
+    color: #f3af04;
+    background: #fff;
     font-size: 1em;
     font-weight: bold;
     outline: none;
@@ -145,6 +107,7 @@ button {
 
 button:hover {
     background: #f3af04;
+    color: #fff;
 }
 
 form {
@@ -153,14 +116,3 @@ form {
     align-items: center;
     justify-content: center;
 }
-
-.selectores select::placeholder {
-    opacity: 0.5;
-    color: #aaa; /* Ajusta este valor según sea necesario */
-}
-
-.selectores select option[value=""] {
-    color: #aaa; /* Ajusta este valor según sea necesario */
-}
-
-
