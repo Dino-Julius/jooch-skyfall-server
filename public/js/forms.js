@@ -1,6 +1,19 @@
 import { moveClouds } from './clouds.js';
 
-// Lista de países del continente americano
+const tiposUsuarios = [
+    { nombre: 'Fabricante de Agroinsumos'},
+    { nombre: 'Distribuidor de Agroinsumos'},
+    { nombre: 'Provedor de seguros'},
+    { nombre: 'Provedor financiero'},
+    { nombre: 'Empresa GPG'},
+    { nombre: 'Acopiador'},
+    { nombre: 'Inversionista'},
+    { nombre: 'Cliente'},
+    { nombre: 'Agricultor'},
+    { nombre: 'Casual'},
+    { nombre: 'Otro'}
+];
+
 const paisesLatinoamerica = [
     { nombre: 'Argentina', codigo: 'AR' },
     { nombre: 'Bolivia', codigo: 'BO' },
@@ -23,6 +36,7 @@ const paisesLatinoamerica = [
     { nombre: 'Uruguay', codigo: 'UY' },
     { nombre: 'Venezuela', codigo: 'VE' }
 ];
+
 const estadosMexico = [
     'Aguascalientes',
     'Baja California',
@@ -59,8 +73,20 @@ const estadosMexico = [
 ];
 
 // Encuentra los selectores en tu HTML
+const tipoUsuario = document.querySelector('select[name="tipUsuario"]');
 const paisSelect = document.querySelector('select[name="pais"]');
 const estadoSelect = document.querySelector('select[name="estado"]');
+
+// Llena el selector de países con una opción para cada país
+tiposUsuarios.forEach((tipo) => {
+    // Crea una nueva opción
+    const option = document.createElement('option');
+    option.value = tipo.nombre;
+    option.text = tipo.nombre;
+
+    // Añade la opción al selector
+    tipoUsuario.appendChild(option);
+});
 
 // Llena el selector de países con una opción para cada país
 paisesLatinoamerica.forEach((pais) => {
@@ -111,11 +137,11 @@ form.addEventListener('submit', async function(event) {
 
     // Obtenemos los datos del formulario actual
     const telefono = this.elements['Teléfono'].value;
-    const tipoUsuario = this.elements['tipUsuario'].value;
+    const tipo_usuario = this.elements['tipUsuario'].value || 'casual';
     const sexo = this.elements['gender'].value;
     const pais = this.elements['pais'].value;
     const estado = this.elements['estado'].value;
-    const fechaNacimiento = this.elements['cumple'].value;
+    const fecha_nacimiento = this.elements['cumple'].value;
 
     // Hacemos una petición a tu servidor para crear el nuevo usuario
     const response = await fetch('/auth/signup', {
@@ -123,7 +149,7 @@ form.addEventListener('submit', async function(event) {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ nombre, apellido, email, password, telefono, tipoUsuario, sexo, pais, estado, fechaNacimiento })
+        body: JSON.stringify({ nombre, apellido, email, password, telefono, tipo_usuario, sexo, pais, estado, fecha_nacimiento })
     });
 
     if (response.ok) {

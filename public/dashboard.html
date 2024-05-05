@@ -9,18 +9,41 @@
     <script type="module" src="js/dashboard.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet" />
   </head>
   <body>
     <div id="cloud1" class="cloud"></div>
     <div id="cloud2" class="cloud"></div>
     <div id="cloud3" class="cloud"></div>
     <div id="cloud4" class="cloud"></div>
-    <div class="main">
-      
+    <div class="main" id="app">
+      <div id="loginContainer">
+        <form id="loginForm">
+          <label for="correo">Correo:</label>
+          <input type="email" id="email" required>
+          <label for="contrasena">Contraseña:</label>
+          <input type="password" id="password" required>
+          <button type="submit">Iniciar sesión</button>
+        </form>
+      </div>
+      <div class="dashboard" id="dashboard" style="display: none;">
+        <h1>Dashboard</h1>
+        <div class="left-panel">
+          <h2>Jugadores registrados:</h2>
+          <ul id="playerList">
+            <!-- Aquí se insertarán los jugadores -->
+          </ul>
+          <div class="search-panel">
+            <div class="search">
+              <label for="searchId">Buscar por ID:</label>
+              <input type="text" id="searchId">
+            </div>
+            <div id="searchResult">
+              <!-- Aquí se mostrarán los resultados de la búsqueda -->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

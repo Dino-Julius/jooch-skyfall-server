@@ -7,7 +7,8 @@ const session = require('express-session'); // Importa express-session
 
 const unityRoutes = require('./apis/unity');
 const jugadorRoutes = require('./apis/jugador');
-const auth = require('./apis/auth'); // Importamos las rutas de autenticación
+const auth = require('./apis/auth');
+const dashboard = require('./apis/dashboard');
 
 // Set server configuration
 const port = 8080;
@@ -54,6 +55,7 @@ app.use(express.json());
 app.use('/', unityRoutes(db));
 app.use('/', jugadorRoutes(db));
 app.use('/auth', auth(db));
+app.use('/dashboard', dashboard(db));
 
 // This code should go after all handlers because it is the final
 // middleware in the chain. If no other middleware handles the
